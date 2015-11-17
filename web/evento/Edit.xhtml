@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="EventoEditDlg" widgetVar="EventoEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditEventoTitle}">
+            <h:form id="EventoEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{eventoController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditEventoLabel_idevento}" for="idevento" />
+                        <p:inputText id="idevento" value="#{eventoController.selected.idevento}" title="#{bundle.EditEventoTitle_idevento}" required="true" requiredMessage="#{bundle.EditEventoRequiredMessage_idevento}"/>
+                        <p:outputLabel value="#{bundle.EditEventoLabel_nombre}" for="nombre" />
+                        <p:inputText id="nombre" value="#{eventoController.selected.nombre}" title="#{bundle.EditEventoTitle_nombre}" required="true" requiredMessage="#{bundle.EditEventoRequiredMessage_nombre}"/>
+                        <p:outputLabel value="#{bundle.EditEventoLabel_lugarRealizacion}" for="lugarRealizacion" />
+                        <p:inputText id="lugarRealizacion" value="#{eventoController.selected.lugarRealizacion}" title="#{bundle.EditEventoTitle_lugarRealizacion}" required="true" requiredMessage="#{bundle.EditEventoRequiredMessage_lugarRealizacion}"/>
+                        <p:outputLabel value="#{bundle.EditEventoLabel_fechaInicio}" for="fechaInicio" />
+                        <p:calendar id="fechaInicio" pattern="MM/dd/yyyy" value="#{eventoController.selected.fechaInicio}" title="#{bundle.EditEventoTitle_fechaInicio}" required="true" requiredMessage="#{bundle.EditEventoRequiredMessage_fechaInicio}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.EditEventoLabel_fechaFinalizacion}" for="fechaFinalizacion" />
+                        <p:calendar id="fechaFinalizacion" pattern="MM/dd/yyyy" value="#{eventoController.selected.fechaFinalizacion}" title="#{bundle.EditEventoTitle_fechaFinalizacion}" required="true" requiredMessage="#{bundle.EditEventoRequiredMessage_fechaFinalizacion}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.EditEventoLabel_caracter}" for="caracter" />
+                        <p:inputText id="caracter" value="#{eventoController.selected.caracter}" title="#{bundle.EditEventoTitle_caracter}" required="true" requiredMessage="#{bundle.EditEventoRequiredMessage_caracter}"/>
+                        <p:outputLabel value="#{bundle.EditEventoLabel_tipoEventoIdtipoEvento}" for="tipoEventoIdtipoEvento" />
+                        <p:selectOneMenu id="tipoEventoIdtipoEvento" value="#{eventoController.selected.tipoEventoIdtipoEvento}" required="true" requiredMessage="#{bundle.EditEventoRequiredMessage_tipoEventoIdtipoEvento}">
+                            <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>
+                            <f:selectItems value="#{tipoEventoController.itemsAvailableSelectOne}"
+                                           var="tipoEventoIdtipoEventoItem"
+                                           itemValue="#{tipoEventoIdtipoEventoItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{eventoController.update}" value="#{bundle.Save}" update="display,:EventoListForm:datalist,:growl" oncomplete="handleSubmit(args, 'EventoEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="EventoEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

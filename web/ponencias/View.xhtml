@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PonenciasViewDlg" widgetVar="PonenciasViewDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.ViewPonenciasTitle}">
+            <h:form id="PonenciasViewForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{ponenciasController.selected != null}">
+                        <h:outputText value="#{bundle.ViewPonenciasLabel_idponencias}"/>
+                        <h:outputText value="#{ponenciasController.selected.idponencias}" title="#{bundle.ViewPonenciasTitle_idponencias}"/>
+                        <h:outputText value="#{bundle.ViewPonenciasLabel_fechaRealizado}"/>
+                        <h:outputText value="#{ponenciasController.selected.fechaRealizado}" title="#{bundle.ViewPonenciasTitle_fechaRealizado}">
+                            <f:convertDateTime pattern="MM/dd/yyyy" />
+                        </h:outputText>
+                        <h:outputText value="#{bundle.ViewPonenciasLabel_nombre}"/>
+                        <h:outputText value="#{ponenciasController.selected.nombre}" title="#{bundle.ViewPonenciasTitle_nombre}"/>
+                        <h:outputText value="#{bundle.ViewPonenciasLabel_eventoIdevento}"/>
+                        <h:outputText value="#{ponenciasController.selected.eventoIdevento}" title="#{bundle.ViewPonenciasTitle_eventoIdevento}"/>
+                    </p:panelGrid>
+                    <p:commandButton value="#{bundle.Close}" onclick="PonenciasViewDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

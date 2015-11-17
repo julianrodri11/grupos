@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="ArticuloEditDlg" widgetVar="ArticuloEditDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.EditArticuloTitle}">
+            <h:form id="ArticuloEditForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{articuloController.selected != null}">
+                        <p:outputLabel value="#{bundle.EditArticuloLabel_idarticulo}" for="idarticulo" />
+                        <p:inputText id="idarticulo" value="#{articuloController.selected.idarticulo}" title="#{bundle.EditArticuloTitle_idarticulo}" required="true" requiredMessage="#{bundle.EditArticuloRequiredMessage_idarticulo}"/>
+                        <p:outputLabel value="#{bundle.EditArticuloLabel_anioPublicacion}" for="anioPublicacion" />
+                        <p:calendar id="anioPublicacion" pattern="MM/dd/yyyy" value="#{articuloController.selected.anioPublicacion}" title="#{bundle.EditArticuloTitle_anioPublicacion}" required="true" requiredMessage="#{bundle.EditArticuloRequiredMessage_anioPublicacion}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.EditArticuloLabel_nombreArticulo}" for="nombreArticulo" />
+                        <p:inputText id="nombreArticulo" value="#{articuloController.selected.nombreArticulo}" title="#{bundle.EditArticuloTitle_nombreArticulo}" required="true" requiredMessage="#{bundle.EditArticuloRequiredMessage_nombreArticulo}"/>
+                        <p:outputLabel value="#{bundle.EditArticuloLabel_revistaIdrevista}" for="revistaIdrevista" />
+                        <p:selectOneMenu id="revistaIdrevista" value="#{articuloController.selected.revistaIdrevista}" required="true" requiredMessage="#{bundle.EditArticuloRequiredMessage_revistaIdrevista}">
+                            <f:selectItem itemLabel="#{bundle.SelectOneMessage}"/>
+                            <f:selectItems value="#{revistaController.itemsAvailableSelectOne}"
+                                           var="revistaIdrevistaItem"
+                                           itemValue="#{revistaIdrevistaItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{articuloController.update}" value="#{bundle.Save}" update="display,:ArticuloListForm:datalist,:growl" oncomplete="handleSubmit(args, 'ArticuloEditDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="ArticuloEditDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="InvestigadorCreateDlg" widgetVar="InvestigadorCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateInvestigadorTitle}">
+            <h:form id="InvestigadorCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{investigadorController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateInvestigadorLabel_cedula}" for="cedula" />
+                        <p:inputText id="cedula" value="#{investigadorController.selected.cedula}" title="#{bundle.CreateInvestigadorTitle_cedula}" required="true" requiredMessage="#{bundle.CreateInvestigadorRequiredMessage_cedula}"/>
+                        <p:outputLabel value="#{bundle.CreateInvestigadorLabel_nombres}" for="nombres" />
+                        <p:inputText id="nombres" value="#{investigadorController.selected.nombres}" title="#{bundle.CreateInvestigadorTitle_nombres}" required="true" requiredMessage="#{bundle.CreateInvestigadorRequiredMessage_nombres}"/>
+                        <p:outputLabel value="#{bundle.CreateInvestigadorLabel_apellidos}" for="apellidos" />
+                        <p:inputText id="apellidos" value="#{investigadorController.selected.apellidos}" title="#{bundle.CreateInvestigadorTitle_apellidos}" required="true" requiredMessage="#{bundle.CreateInvestigadorRequiredMessage_apellidos}"/>
+                        <p:outputLabel value="#{bundle.CreateInvestigadorLabel_estdoinvestigadoridestdoInvestigador}" for="estdoinvestigadoridestdoInvestigador" />
+                        <p:selectOneMenu id="estdoinvestigadoridestdoInvestigador" value="#{investigadorController.selected.estdoinvestigadoridestdoInvestigador}" required="true" requiredMessage="#{bundle.EditInvestigadorRequiredMessage_estdoinvestigadoridestdoInvestigador}">
+                            <f:selectItems value="#{estdoInvestigadorController.itemsAvailableSelectOne}"
+                                           var="estdoinvestigadoridestdoInvestigadorItem"
+                                           itemValue="#{estdoinvestigadoridestdoInvestigadorItem}"/>
+                        </p:selectOneMenu>
+                        <p:outputLabel value="#{bundle.CreateInvestigadorLabel_formacionAcademicaIdformacionAcademica}" for="formacionAcademicaIdformacionAcademica" />
+                        <p:selectOneMenu id="formacionAcademicaIdformacionAcademica" value="#{investigadorController.selected.formacionAcademicaIdformacionAcademica}" required="true" requiredMessage="#{bundle.EditInvestigadorRequiredMessage_formacionAcademicaIdformacionAcademica}">
+                            <f:selectItems value="#{formacionAcademicaController.itemsAvailableSelectOne}"
+                                           var="formacionAcademicaIdformacionAcademicaItem"
+                                           itemValue="#{formacionAcademicaIdformacionAcademicaItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{investigadorController.create}" value="#{bundle.Save}" update="display,:InvestigadorListForm:datalist,:growl" oncomplete="handleSubmit(args,'InvestigadorCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="InvestigadorCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

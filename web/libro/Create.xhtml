@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="LibroCreateDlg" widgetVar="LibroCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateLibroTitle}">
+            <h:form id="LibroCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{libroController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateLibroLabel_idlibros}" for="idlibros" />
+                        <p:inputText id="idlibros" value="#{libroController.selected.idlibros}" title="#{bundle.CreateLibroTitle_idlibros}" required="true" requiredMessage="#{bundle.CreateLibroRequiredMessage_idlibros}"/>
+                        <p:outputLabel value="#{bundle.CreateLibroLabel_anioPublicacion}" for="anioPublicacion" />
+                        <p:calendar id="anioPublicacion" pattern="MM/dd/yyyy" value="#{libroController.selected.anioPublicacion}" title="#{bundle.EditLibroTitle_anioPublicacion}" required="true" requiredMessage="#{bundle.EditLibroRequiredMessage_anioPublicacion}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreateLibroLabel_titulo}" for="titulo" />
+                        <p:inputText id="titulo" value="#{libroController.selected.titulo}" title="#{bundle.CreateLibroTitle_titulo}" required="true" requiredMessage="#{bundle.CreateLibroRequiredMessage_titulo}"/>
+                        <p:outputLabel value="#{bundle.CreateLibroLabel_editorialIdeditorial}" for="editorialIdeditorial" />
+                        <p:selectOneMenu id="editorialIdeditorial" value="#{libroController.selected.editorialIdeditorial}" required="true" requiredMessage="#{bundle.EditLibroRequiredMessage_editorialIdeditorial}">
+                            <f:selectItems value="#{editorialController.itemsAvailableSelectOne}"
+                                           var="editorialIdeditorialItem"
+                                           itemValue="#{editorialIdeditorialItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{libroController.create}" value="#{bundle.Save}" update="display,:LibroListForm:datalist,:growl" oncomplete="handleSubmit(args,'LibroCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="LibroCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

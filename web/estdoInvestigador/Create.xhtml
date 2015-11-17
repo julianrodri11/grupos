@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="EstdoInvestigadorCreateDlg" widgetVar="EstdoInvestigadorCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreateEstdoInvestigadorTitle}">
+            <h:form id="EstdoInvestigadorCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{estdoInvestigadorController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreateEstdoInvestigadorLabel_idestdoInvestigador}" for="idestdoInvestigador" />
+                        <p:inputText id="idestdoInvestigador" value="#{estdoInvestigadorController.selected.idestdoInvestigador}" title="#{bundle.CreateEstdoInvestigadorTitle_idestdoInvestigador}" required="true" requiredMessage="#{bundle.CreateEstdoInvestigadorRequiredMessage_idestdoInvestigador}"/>
+                        <p:outputLabel value="#{bundle.CreateEstdoInvestigadorLabel_estado}" for="estado" />
+                        <p:inputText id="estado" value="#{estdoInvestigadorController.selected.estado}" title="#{bundle.CreateEstdoInvestigadorTitle_estado}" />
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{estdoInvestigadorController.create}" value="#{bundle.Save}" update="display,:EstdoInvestigadorListForm:datalist,:growl" oncomplete="handleSubmit(args,'EstdoInvestigadorCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="EstdoInvestigadorCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>

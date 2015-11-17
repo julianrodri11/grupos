@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+      xmlns:h="http://xmlns.jcp.org/jsf/html"
+      xmlns:f="http://xmlns.jcp.org/jsf/core"
+      xmlns:p="http://primefaces.org/ui">
+
+    <ui:composition>
+
+        <p:dialog id="PonenciasCreateDlg" widgetVar="PonenciasCreateDialog" modal="true" resizable="false" appendTo="@(body)" header="#{bundle.CreatePonenciasTitle}">
+            <h:form id="PonenciasCreateForm">
+                <h:panelGroup id="display">
+                    <p:panelGrid columns="2" rendered="#{ponenciasController.selected != null}">
+                        <p:outputLabel value="#{bundle.CreatePonenciasLabel_idponencias}" for="idponencias" />
+                        <p:inputText id="idponencias" value="#{ponenciasController.selected.idponencias}" title="#{bundle.CreatePonenciasTitle_idponencias}" required="true" requiredMessage="#{bundle.CreatePonenciasRequiredMessage_idponencias}"/>
+                        <p:outputLabel value="#{bundle.CreatePonenciasLabel_fechaRealizado}" for="fechaRealizado" />
+                        <p:calendar id="fechaRealizado" pattern="MM/dd/yyyy" value="#{ponenciasController.selected.fechaRealizado}" title="#{bundle.EditPonenciasTitle_fechaRealizado}" required="true" requiredMessage="#{bundle.EditPonenciasRequiredMessage_fechaRealizado}" showOn="button"/>
+                        <p:outputLabel value="#{bundle.CreatePonenciasLabel_nombre}" for="nombre" />
+                        <p:inputText id="nombre" value="#{ponenciasController.selected.nombre}" title="#{bundle.CreatePonenciasTitle_nombre}" required="true" requiredMessage="#{bundle.CreatePonenciasRequiredMessage_nombre}"/>
+                        <p:outputLabel value="#{bundle.CreatePonenciasLabel_eventoIdevento}" for="eventoIdevento" />
+                        <p:selectOneMenu id="eventoIdevento" value="#{ponenciasController.selected.eventoIdevento}" required="true" requiredMessage="#{bundle.EditPonenciasRequiredMessage_eventoIdevento}">
+                            <f:selectItems value="#{eventoController.itemsAvailableSelectOne}"
+                                           var="eventoIdeventoItem"
+                                           itemValue="#{eventoIdeventoItem}"/>
+                        </p:selectOneMenu>
+                    </p:panelGrid>
+                    <p:commandButton actionListener="#{ponenciasController.create}" value="#{bundle.Save}" update="display,:PonenciasListForm:datalist,:growl" oncomplete="handleSubmit(args,'PonenciasCreateDialog');"/>
+                    <p:commandButton value="#{bundle.Cancel}" onclick="PonenciasCreateDialog.hide()"/>
+                </h:panelGroup>
+            </h:form>
+        </p:dialog>
+
+    </ui:composition>
+</html>
