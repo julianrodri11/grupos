@@ -7,17 +7,20 @@
       xmlns:p="http://primefaces.org/ui">
 
     <h:head>
-        <title><ui:insert name="title">Default Title</ui:insert></title>
+        <title><ui:insert name="title">Grupo investigacion</ui:insert></title>
+       
         <h:outputStylesheet library="css" name="jsfcrud.css"/>
         <h:outputScript library="js" name="jsfcrud.js"/>
     </h:head>
+    
+    
 
-    <h:body>
+    <h:body>     
 
         <p:growl id="growl" life="3000" />
-
-        <p:layout fullPage="true">
-            <p:layoutUnit position="north" size="65" header="#{bundle.AppName}">
+        <p:layout fullPage="true">            
+            <p:layoutUnit position="north" size="65" >
+       <p:graphicImage  value="/resources/img/bn.png" width="100%" height="175px"/>
                 <h:form>
             <p:tabMenu activeIndex="#{param.i}">
     <p:menuitem outcome="/articulo/List" value="Articulo"  icon="ui-icon-bookmark">
