@@ -12,8 +12,6 @@
             <h:form id="FormacionAcademicaCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{formacionAcademicaController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateFormacionAcademicaLabel_idformacionAcademica}" for="idformacionAcademica" />
-                        <p:inputText id="idformacionAcademica" value="#{formacionAcademicaController.selected.idformacionAcademica}" title="#{bundle.CreateFormacionAcademicaTitle_idformacionAcademica}" required="true" requiredMessage="#{bundle.CreateFormacionAcademicaRequiredMessage_idformacionAcademica}"/>
                         <p:outputLabel value="#{bundle.CreateFormacionAcademicaLabel_nombre}" for="nombre" />
                         <p:inputText id="nombre" value="#{formacionAcademicaController.selected.nombre}" title="#{bundle.CreateFormacionAcademicaTitle_nombre}" />
                         <p:outputLabel value="#{bundle.CreateFormacionAcademicaLabel_anioInicio}" for="anioInicio" />

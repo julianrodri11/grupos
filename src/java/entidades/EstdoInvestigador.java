@@ -100,7 +100,7 @@ public class EstdoInvestigador implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.EstdoInvestigador[ idestdoInvestigador=" + idestdoInvestigador + " ]";
+        return estado;
     }
     
 }

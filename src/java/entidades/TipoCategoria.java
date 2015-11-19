@@ -123,7 +123,7 @@ public class TipoCategoria implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.TipoCategoria[ idtipoCategoria=" + idtipoCategoria + " ]";
+        return nombre;
     }
     
 }

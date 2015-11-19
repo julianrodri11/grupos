@@ -12,8 +12,6 @@
             <h:form id="PonenciasCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{ponenciasController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreatePonenciasLabel_idponencias}" for="idponencias" />
-                        <p:inputText id="idponencias" value="#{ponenciasController.selected.idponencias}" title="#{bundle.CreatePonenciasTitle_idponencias}" required="true" requiredMessage="#{bundle.CreatePonenciasRequiredMessage_idponencias}"/>
                         <p:outputLabel value="#{bundle.CreatePonenciasLabel_fechaRealizado}" for="fechaRealizado" />
                         <p:calendar id="fechaRealizado" pattern="MM/dd/yyyy" value="#{ponenciasController.selected.fechaRealizado}" title="#{bundle.EditPonenciasTitle_fechaRealizado}" required="true" requiredMessage="#{bundle.EditPonenciasRequiredMessage_fechaRealizado}" showOn="button"/>
                         <p:outputLabel value="#{bundle.CreatePonenciasLabel_nombre}" for="nombre" />

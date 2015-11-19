@@ -12,8 +12,6 @@
             <h:form id="LibroCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{libroController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateLibroLabel_idlibros}" for="idlibros" />
-                        <p:inputText id="idlibros" value="#{libroController.selected.idlibros}" title="#{bundle.CreateLibroTitle_idlibros}" required="true" requiredMessage="#{bundle.CreateLibroRequiredMessage_idlibros}"/>
                         <p:outputLabel value="#{bundle.CreateLibroLabel_anioPublicacion}" for="anioPublicacion" />
                         <p:calendar id="anioPublicacion" pattern="MM/dd/yyyy" value="#{libroController.selected.anioPublicacion}" title="#{bundle.EditLibroTitle_anioPublicacion}" required="true" requiredMessage="#{bundle.EditLibroRequiredMessage_anioPublicacion}" showOn="button"/>
                         <p:outputLabel value="#{bundle.CreateLibroLabel_titulo}" for="titulo" />

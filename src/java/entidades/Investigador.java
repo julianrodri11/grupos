@@ -186,7 +186,7 @@ public class Investigador implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.Investigador[ cedula=" + cedula + " ]";
+        return cedula +" - " + nombres;
     }
     
 }

@@ -12,9 +12,7 @@
             <h:form id="RevistaCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{revistaController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateRevistaLabel_idrevista}" for="idrevista" />
-                        <p:inputText id="idrevista" value="#{revistaController.selected.idrevista}" title="#{bundle.CreateRevistaTitle_idrevista}" required="true" requiredMessage="#{bundle.CreateRevistaRequiredMessage_idrevista}"/>
-                        <p:outputLabel value="#{bundle.CreateRevistaLabel_nombre}" for="nombre" />
+                       <p:outputLabel value="#{bundle.CreateRevistaLabel_nombre}" for="nombre" />
                         <p:inputText id="nombre" value="#{revistaController.selected.nombre}" title="#{bundle.CreateRevistaTitle_nombre}" required="true" requiredMessage="#{bundle.CreateRevistaRequiredMessage_nombre}"/>
                         <p:outputLabel value="#{bundle.CreateRevistaLabel_indexada}" for="indexada" />
                         <p:inputText id="indexada" value="#{revistaController.selected.indexada}" title="#{bundle.CreateRevistaTitle_indexada}" required="true" requiredMessage="#{bundle.CreateRevistaRequiredMessage_indexada}"/>

@@ -139,7 +139,7 @@ public class GruposInvestigacion implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.GruposInvestigacion[ idgruposInvestigacion=" + idgruposInvestigacion + " ]";
+        return nombre;
     }
     
 }

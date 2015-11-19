@@ -12,9 +12,7 @@
             <h:form id="GruposInvestigacionCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{gruposInvestigacionController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateGruposInvestigacionLabel_idgruposInvestigacion}" for="idgruposInvestigacion" />
-                        <p:inputText id="idgruposInvestigacion" value="#{gruposInvestigacionController.selected.idgruposInvestigacion}" title="#{bundle.CreateGruposInvestigacionTitle_idgruposInvestigacion}" required="true" requiredMessage="#{bundle.CreateGruposInvestigacionRequiredMessage_idgruposInvestigacion}"/>
-                        <p:outputLabel value="#{bundle.CreateGruposInvestigacionLabel_nombre}" for="nombre" />
+                       <p:outputLabel value="#{bundle.CreateGruposInvestigacionLabel_nombre}" for="nombre" />
                         <p:inputText id="nombre" value="#{gruposInvestigacionController.selected.nombre}" title="#{bundle.CreateGruposInvestigacionTitle_nombre}" required="true" requiredMessage="#{bundle.CreateGruposInvestigacionRequiredMessage_nombre}"/>
                         <p:outputLabel value="#{bundle.CreateGruposInvestigacionLabel_lineaInvestigacion}" for="lineaInvestigacion" />
                         <p:inputText id="lineaInvestigacion" value="#{gruposInvestigacionController.selected.lineaInvestigacion}" title="#{bundle.CreateGruposInvestigacionTitle_lineaInvestigacion}" required="true" requiredMessage="#{bundle.CreateGruposInvestigacionRequiredMessage_lineaInvestigacion}"/>

@@ -12,8 +12,6 @@
             <h:form id="EditorialCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{editorialController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateEditorialLabel_ideditorial}" for="ideditorial" />
-                        <p:inputText id="ideditorial" value="#{editorialController.selected.ideditorial}" title="#{bundle.CreateEditorialTitle_ideditorial}" required="true" requiredMessage="#{bundle.CreateEditorialRequiredMessage_ideditorial}"/>
                         <p:outputLabel value="#{bundle.CreateEditorialLabel_nombre}" for="nombre" />
                         <p:inputText id="nombre" value="#{editorialController.selected.nombre}" title="#{bundle.CreateEditorialTitle_nombre}" required="true" requiredMessage="#{bundle.CreateEditorialRequiredMessage_nombre}"/>
                         <p:outputLabel value="#{bundle.CreateEditorialLabel_ciudad}" for="ciudad" />

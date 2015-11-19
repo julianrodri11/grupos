@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Scene Scope="Project" version="2">
+    <Scope Scope="Faces Configuration Only"/>
+    <Scope Scope="Project">
+        <Node id="gruposInvestigacion/Edit.xhtml" x="1650" y="150" zoom="true"/>
+        <Node id="tipoEvento/Edit.xhtml" x="900" y="150" zoom="true"/>
+        <Node id="tipoCategoria/Edit.xhtml" x="1150" y="450" zoom="true"/>
+        <Node id="welcomePrimefaces.xhtml" x="150" y="450" zoom="true"/>
+        <Node id="tipoCategoria/View.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="tipoEvento/View.xhtml" x="900" y="900" zoom="true"/>
+        <Node id="evento/List.xhtml" x="1150" y="150" zoom="true"/>
+        <Node id="gruposInvestigacion/View.xhtml" x="1400" y="600" zoom="true"/>
+        <Node id="tipoCategoria/List.xhtml" x="900" y="450" zoom="true"/>
+        <Node id="evento/View.xhtml" x="1400" y="150" zoom="true"/>
+        <Node id="editorial/Edit.xhtml" x="1150" y="300" zoom="true"/>
+        <Node id="editorial/View.xhtml" x="400" y="900" zoom="true"/>
+        <Node id="evento/Edit.xhtml" x="150" y="1350" zoom="true"/>
+        <Node id="articulo/Create.xhtml" x="1650" y="600" zoom="true"/>
+        <Node id="login/login_error.jsp" x="650" y="750" zoom="true"/>
+        <Node id="revista/Create.xhtml" x="1400" y="750" zoom="true"/>
+        <Node id="index.xhtml" x="650" y="450" zoom="true"/>
+        <Node id="ponencias/Edit.xhtml" x="150" y="600" zoom="true"/>
+        <Node id="gruposInvestigacion/List.xhtml" x="2150" y="300" zoom="true"/>
+        <Node id="ponencias/Create.xhtml" x="150" y="150" zoom="true"/>
+        <Node id="evento/Create.xhtml" x="400" y="1050" zoom="true"/>
+        <Node id="tipoEvento/List.xhtml" x="1400" y="450" zoom="true"/>
+        <Node id="articulo/Edit.xhtml" x="1650" y="450" zoom="true"/>
+        <Node id="investigador/Edit.xhtml" x="400" y="750" zoom="true"/>
+        <Node id="formacionAcademica/Create.xhtml" x="650" y="1200" zoom="true"/>
+        <Node id="formacionAcademica/Edit.xhtml" x="1150" y="900" zoom="true"/>
+        <Node id="formacionAcademica/View.xhtml" x="650" y="900" zoom="true"/>
+        <Node id="libro/Edit.xhtml" x="400" y="600" zoom="true"/>
+        <Node id="tipoCategoria/Create.xhtml" x="1900" y="450" zoom="true"/>
+        <Node id="revista/View.xhtml" x="650" y="600" zoom="true"/>
+        <Node id="investigador/View.xhtml" x="1900" y="150" zoom="true"/>
+        <Node id="revista/List.xhtml" x="400" y="300" zoom="true"/>
+        <Node id="estdoInvestigador/Edit.xhtml" x="150" y="750" zoom="true"/>
+        <Node id="libro/List.xhtml" x="1650" y="300" zoom="true"/>
+        <Node id="articulo/List.xhtml" x="2150" y="150" zoom="true"/>
+        <Node id="investigador/List.xhtml" x="2400" y="150" zoom="true"/>
+        <Node id="articulo/View.xhtml" x="150" y="900" zoom="true"/>
+        <Node id="revista/Edit.xhtml" x="650" y="300" zoom="true"/>
+        <Node id="libro/View.xhtml" x="1400" y="300" zoom="true"/>
+        <Node id="login/login_form.jsp" x="1150" y="750" zoom="true"/>
+        <Node id="template.xhtml" x="1150" y="600" zoom="true"/>
+        <Node id="formacionAcademica/List.xhtml" x="900" y="600" zoom="true"/>
+        <Node id="libro/Create.xhtml" x="1900" y="300" zoom="true"/>
+        <Node id="editorial/List.xhtml" x="150" y="1050" zoom="true"/>
+        <Node id="editorial/Create.xhtml" x="900" y="750" zoom="true"/>
+        <Node id="ponencias/List.xhtml" x="400" y="1200" zoom="true"/>
+        <Node id="tipoEvento/Create.xhtml" x="900" y="1050" zoom="true"/>
+        <Node id="investigador/Create.xhtml" x="650" y="1050" zoom="true"/>
+        <Node id="ponencias/View.xhtml" x="150" y="1200" zoom="true"/>
+        <Node id="estdoInvestigador/View.xhtml" x="150" y="300" zoom="true"/>
+        <Node id="estdoInvestigador/Create.xhtml" x="650" y="150" zoom="true"/>
+        <Node id="gruposInvestigacion/Create.xhtml" x="900" y="300" zoom="true"/>
+        <Node id="estdoInvestigador/List.xhtml" x="400" y="150" zoom="true"/>
+    </Scope>
+    <Scope Scope="All Faces Configurations"/>
+</Scene>

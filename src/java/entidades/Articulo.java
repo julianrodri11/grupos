@@ -142,7 +142,7 @@ public class Articulo implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.Articulo[ idarticulo=" + idarticulo + " ]";
+        return nombreArticulo;
     }
     
 }

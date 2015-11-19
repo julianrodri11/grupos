@@ -12,8 +12,6 @@
             <h:form id="EstdoInvestigadorCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{estdoInvestigadorController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateEstdoInvestigadorLabel_idestdoInvestigador}" for="idestdoInvestigador" />
-                        <p:inputText id="idestdoInvestigador" value="#{estdoInvestigadorController.selected.idestdoInvestigador}" title="#{bundle.CreateEstdoInvestigadorTitle_idestdoInvestigador}" required="true" requiredMessage="#{bundle.CreateEstdoInvestigadorRequiredMessage_idestdoInvestigador}"/>
                         <p:outputLabel value="#{bundle.CreateEstdoInvestigadorLabel_estado}" for="estado" />
                         <p:inputText id="estado" value="#{estdoInvestigadorController.selected.estado}" title="#{bundle.CreateEstdoInvestigadorTitle_estado}" />
                     </p:panelGrid>

@@ -12,9 +12,7 @@
             <h:form id="TipoCategoriaCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{tipoCategoriaController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateTipoCategoriaLabel_idtipoCategoria}" for="idtipoCategoria" />
-                        <p:inputText id="idtipoCategoria" value="#{tipoCategoriaController.selected.idtipoCategoria}" title="#{bundle.CreateTipoCategoriaTitle_idtipoCategoria}" required="true" requiredMessage="#{bundle.CreateTipoCategoriaRequiredMessage_idtipoCategoria}"/>
-                        <p:outputLabel value="#{bundle.CreateTipoCategoriaLabel_nombre}" for="nombre" />
+                       <p:outputLabel value="#{bundle.CreateTipoCategoriaLabel_nombre}" for="nombre" />
                         <p:inputText id="nombre" value="#{tipoCategoriaController.selected.nombre}" title="#{bundle.CreateTipoCategoriaTitle_nombre}" required="true" requiredMessage="#{bundle.CreateTipoCategoriaRequiredMessage_nombre}"/>
                         <p:outputLabel value="#{bundle.CreateTipoCategoriaLabel_descripcion}" for="descripcion" />
                         <p:inputText id="descripcion" value="#{tipoCategoriaController.selected.descripcion}" title="#{bundle.CreateTipoCategoriaTitle_descripcion}" required="true" requiredMessage="#{bundle.CreateTipoCategoriaRequiredMessage_descripcion}"/>

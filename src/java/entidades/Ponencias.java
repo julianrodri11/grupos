@@ -138,7 +138,7 @@ public class Ponencias implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.Ponencias[ idponencias=" + idponencias + " ]";
+        return nombre;
     }
     
 }

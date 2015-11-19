@@ -138,7 +138,7 @@ public class FormacionAcademica implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.FormacionAcademica[ idformacionAcademica=" + idformacionAcademica + " ]";
+        return nombre;
     }
     
 }

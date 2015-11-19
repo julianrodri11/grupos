@@ -184,7 +184,7 @@ public class Evento implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.Evento[ idevento=" + idevento + " ]";
+        return nombre;
     }
     
 }

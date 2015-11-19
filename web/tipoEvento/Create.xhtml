@@ -12,9 +12,7 @@
             <h:form id="TipoEventoCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{tipoEventoController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateTipoEventoLabel_idtipoEvento}" for="idtipoEvento" />
-                        <p:inputText id="idtipoEvento" value="#{tipoEventoController.selected.idtipoEvento}" title="#{bundle.CreateTipoEventoTitle_idtipoEvento}" required="true" requiredMessage="#{bundle.CreateTipoEventoRequiredMessage_idtipoEvento}"/>
-                        <p:outputLabel value="#{bundle.CreateTipoEventoLabel_nombre}" for="nombre" />
+                       <p:outputLabel value="#{bundle.CreateTipoEventoLabel_nombre}" for="nombre" />
                         <p:inputText id="nombre" value="#{tipoEventoController.selected.nombre}" title="#{bundle.CreateTipoEventoTitle_nombre}" />
                     </p:panelGrid>
                     <p:commandButton actionListener="#{tipoEventoController.create}" value="#{bundle.Save}" update="display,:TipoEventoListForm:datalist,:growl" oncomplete="handleSubmit(args,'TipoEventoCreateDialog');"/>

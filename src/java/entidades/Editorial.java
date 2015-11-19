@@ -138,7 +138,7 @@ public class Editorial implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.Editorial[ ideditorial=" + ideditorial + " ]";
+        return nombre;
     }
     
 }

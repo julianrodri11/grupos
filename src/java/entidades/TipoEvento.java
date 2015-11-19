@@ -100,7 +100,7 @@ public class TipoEvento implements Serializable {
 
     @Override
     public String toString() {
-        return "entidades.TipoEvento[ idtipoEvento=" + idtipoEvento + " ]";
+        return nombre;
     }
     
 }

@@ -12,9 +12,7 @@
             <h:form id="ArticuloCreateForm">
                 <h:panelGroup id="display">
                     <p:panelGrid columns="2" rendered="#{articuloController.selected != null}">
-                        <p:outputLabel value="#{bundle.CreateArticuloLabel_idarticulo}" for="idarticulo" />
-                        <p:inputText id="idarticulo" value="#{articuloController.selected.idarticulo}" title="#{bundle.CreateArticuloTitle_idarticulo}" required="true" requiredMessage="#{bundle.CreateArticuloRequiredMessage_idarticulo}"/>
-                        <p:outputLabel value="#{bundle.CreateArticuloLabel_anioPublicacion}" for="anioPublicacion" />
+                       <p:outputLabel value="#{bundle.CreateArticuloLabel_anioPublicacion}" for="anioPublicacion" />
                         <p:calendar id="anioPublicacion" pattern="MM/dd/yyyy" value="#{articuloController.selected.anioPublicacion}" title="#{bundle.EditArticuloTitle_anioPublicacion}" required="true" requiredMessage="#{bundle.EditArticuloRequiredMessage_anioPublicacion}" showOn="button"/>
                         <p:outputLabel value="#{bundle.CreateArticuloLabel_nombreArticulo}" for="nombreArticulo" />
                         <p:inputText id="nombreArticulo" value="#{articuloController.selected.nombreArticulo}" title="#{bundle.CreateArticuloTitle_nombreArticulo}" required="true" requiredMessage="#{bundle.CreateArticuloRequiredMessage_nombreArticulo}"/>
