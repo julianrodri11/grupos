@@ -54,6 +54,7 @@
         <web-resource-collection>
             <web-resource-name>investigadorInve</web-resource-name>
             <description/>
+            <url-pattern>/faces/formacionAcademica/*</url-pattern>
             <url-pattern>/faces/articulo/*</url-pattern>
             <url-pattern>/faces/libro/*</url-pattern>
             <url-pattern>/faces/ponencias/*</url-pattern>
