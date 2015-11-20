@@ -16,15 +16,13 @@ public class Usuario implements Serializable {
 
     private String nombre;
 
-    public String getNombre() {
-        if (nombre == null) {
+    public String getNombre() 
+    {
+        if (nombre != null) {
             getDatosUsuario();
         }
-        else
-        {
-            nombre= "Anonimo";
-        }
-        return nombre == null ? "" : nombre;
+       
+        return nombre == null ? "Anonimo" : nombre;
     }
 
     public void setNombre(String nombre) {
