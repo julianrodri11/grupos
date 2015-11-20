@@ -22,16 +22,17 @@
        <p:graphicImage  value="/resources/img/bn.png" width="100%" height="175px"/>
            </div>
       
-          
+           <div>
+       <ui:include src="menu.xhtml" />
+                </div>
             <h:form>
             Acceso concedido Usuario: #{usuario.nombre} <h:commandLink value="Logout" actionListener="#{usuario.logout()}" action="bienvenida"/>
             <br/>
-             </h:form>
             
             <div>
                 <p:graphicImage  value="/resources/img/libros1.jpg" width="100%" height="505px"/>
             </div>        
-       
+        </h:form>
                    
         </div>
 

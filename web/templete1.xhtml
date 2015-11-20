@@ -26,7 +26,7 @@
               
                    <div id="divusuario">
             <h:form>
-            Acceso concedido Usuario: #{usuario.nombre} <h:commandLink value="Logout" actionListener="#{usuario.logout()}" action="bienvenida"/>
+            Acceso concedido Usuario: #{usuario.nombre} <h:commandLink value="Salir" actionListener="#{usuario.logout()}" action="bienvenida"/>
         </h:form>
                   </div>
                 
@@ -36,7 +36,7 @@
 
         <div id="content" class="center_content">
            
-            <ui:insert name="content"></ui:insert>
+            <ui:insert name="content">Content</ui:insert>
         </div>
 
         <div id="bottom">
