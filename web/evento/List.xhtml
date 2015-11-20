@@ -72,9 +72,9 @@
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListEventoTitle_tipoEventoIdtipoEvento}"/>
+                                <h:outputText value="Tipo Evento"/>
                             </f:facet>
-                            <h:outputText value="#{item.tipoEventoIdtipoEvento}"/>
+                            <h:outputText value="#{item.tipoEventoIdtipoEvento.nombre}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{eventoController.prepareCreate}" update=":EventoCreateForm" oncomplete="PF('EventoCreateDialog').show()"/>

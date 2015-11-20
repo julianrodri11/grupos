@@ -50,9 +50,9 @@
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListGruposInvestigacionTitle_tipoCategoriaIdtipoCategoria}"/>
+                                <h:outputText value="Categoria"/>
                             </f:facet>
-                            <h:outputText value="#{item.tipoCategoriaIdtipoCategoria}"/>
+                            <h:outputText value="#{item.tipoCategoriaIdtipoCategoria.nombre}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{gruposInvestigacionController.prepareCreate}" update=":GruposInvestigacionCreateForm" oncomplete="PF('GruposInvestigacionCreateDialog').show()"/>

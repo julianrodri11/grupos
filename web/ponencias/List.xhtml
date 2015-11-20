@@ -52,9 +52,9 @@
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListPonenciasTitle_eventoIdevento}"/>
+                                <h:outputText value="Nombre Evento"/>
                             </f:facet>
-                            <h:outputText value="#{item.eventoIdevento}"/>
+                            <h:outputText value="#{item.eventoIdevento.nombre}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{ponenciasController.prepareCreate}" update=":PonenciasCreateForm" oncomplete="PF('PonenciasCreateDialog').show()"/>

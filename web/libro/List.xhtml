@@ -53,9 +53,9 @@
                         </p:column>
                         <p:column>
                             <f:facet name="header">
-                                <h:outputText value="#{bundle.ListLibroTitle_editorialIdeditorial}"/>
+                                <h:outputText value="Editoral"/>
                             </f:facet>
-                            <h:outputText value="#{item.editorialIdeditorial}"/>
+                            <h:outputText value="#{item.editorialIdeditorial.nombre}"/>
                         </p:column>
                         <f:facet name="footer">
                             <p:commandButton id="createButton" icon="ui-icon-plus"   value="#{bundle.Create}" actionListener="#{libroController.prepareCreate}" update=":LibroCreateForm" oncomplete="PF('LibroCreateDialog').show()"/>
