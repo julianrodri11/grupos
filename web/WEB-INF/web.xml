@@ -79,4 +79,8 @@
         <description/>
         <role-name>investigadorRole</role-name>
     </security-role>
+    <context-param>
+<param-name>primefaces.THEME</param-name>
+<param-value>tema</param-value>
+</context-param>
 </web-app>
