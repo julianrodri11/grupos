@@ -23,17 +23,16 @@
            </div>
       
            <div>
-       <ui:include src="menu.xhtml" />
-                </div>
             <h:form>
             Acceso concedido Usuario: #{usuario.nombre} <h:commandLink value="Logout" actionListener="#{usuario.logout()}" action="bienvenida"/>
         </h:form>
+           </div>  
         
         </div>
 
         <div id="content" class="center_content">
            
-            <ui:insert name="content">Content</ui:insert>
+            <ui:insert name="content"></ui:insert>
         </div>
 
         <div id="bottom">

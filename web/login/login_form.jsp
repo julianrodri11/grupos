@@ -11,15 +11,15 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-    <ui:composition template="/templete1.xhtml">
+
         <ui:define name="content">    
         <h1>Para esta seccion debes autenticarte</h1>
-        <p:form method="post" action="j_security_check">
+        <form method="post" action="j_security_check">
             
             User Id: <input name="j_username"/><br/>
             Password:<input name="j_password" type="password"/><br/>
             <input type="submit" value="Login..."/>
-        </p:form>
+        </form>
     
             </ui:define>
         </ui:composition>

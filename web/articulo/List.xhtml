@@ -14,17 +14,10 @@
             
         </ui:define>
 
-        <ui:define name="content">
-            <h:form>
-            Bienvenida
-            <br/>
-            Acceso concedido
-            <br/>
-            Usuario: #{usuario.nombre}
-            
-            <br/>
-            <h:commandLink value="Logout" actionListener="#{usuario.logout()}" action="bienvenida"/>
-        </h:form>
+       <ui:define name="content">
+            <ui:include src="../menu.xhtml"/>
+             <br/>
+              <br/>
             <h:form id="ArticuloListForm">
                 <p:panel header="#{bundle.ListArticuloTitle}">
                     <p:dataTable id="datalist" value="#{articuloController.items}" var="item"
