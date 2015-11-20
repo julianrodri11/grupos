@@ -17,24 +17,22 @@
     <h:body>
 
         <div id="top">
-           <p:growl id="growl" life="3000" />              
+           <p:growl id="growl" life="3000" />   
+           <div>
        <p:graphicImage  value="/resources/img/bn.png" width="100%" height="175px"/>
+           </div>
+      
+           <div>
        <ui:include src="menu.xhtml" />
-                
+                </div>
+            <h:form>
+            Acceso concedido Usuario: #{usuario.nombre} <h:commandLink value="Logout" actionListener="#{usuario.logout()}" action="bienvenida"/>
+        </h:form>
         
         </div>
 
         <div id="content" class="center_content">
-            <h:form>
-            Bienvenida
-            <br/>
-            Acceso concedido
-            <br/>
-            Usuario: #{usuario.nombre}
-            
-            <br/>
-            <h:commandLink value="Logout" actionListener="#{usuario.logout()}" action="bienvenida"/>
-        </h:form>
+           
             <ui:insert name="content">Content</ui:insert>
         </div>
 
