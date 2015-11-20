@@ -6,42 +6,47 @@
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
     
-               <h:form>
-                    <p:tabMenu activeIndex="#{param.i}" id="menu1">
-    <p:menuitem outcome="/citaMedica/List" value="Cita Medica"  icon="ui-icon-bookmark">
+    <h:form>
+            <p:tabMenu activeIndex="#{param.i}">
+    <p:menuitem outcome="/articulo/List" value="Articulo"  icon="ui-icon-bookmark">
         <f:param name="i" value="0" />
     </p:menuitem>
-    <p:menuitem outcome="/historiaClinica/List" value="Historia Clinica" icon="ui-icon-disk">
+    <p:menuitem outcome="/editorial/List" value="Editorial" icon="ui-icon-disk">
         <f:param name="i" value="1" />
     </p:menuitem>
-    <p:menuitem outcome="/paciente/List" value="Paciente" icon="ui-icon-document">
+    <p:menuitem outcome="/estdoInvestigador/List" value="Estdo Investigador" icon="ui-icon-document">
         <f:param name="i" value="2" />
     </p:menuitem>
-    <p:menuitem outcome="/pertenese/List" value="Pertenese"  icon="ui-icon-calculator">
+    <p:menuitem outcome="/evento/List" value="Evento"  icon="ui-icon-calculator">
         <f:param name="i" value="3" />
     </p:menuitem>
-    <p:menuitem outcome="/sucursal/List" value="Sucursal" icon="ui-icon-contact">
+    <p:menuitem outcome="/formacionAcademica/List" value="For. Academica" icon="ui-icon-contact">
         <f:param name="i" value="4" />
     </p:menuitem>
-    <p:menuitem outcome="/tipoClase/List" value="Tipo Clase" icon="ui-icon-link">
+    <p:menuitem outcome="/gruposInvestigacion/List" value="Grupos Investigacion" icon="ui-icon-link">
         <f:param name="i" value="5" />
     </p:menuitem>
-    <p:menuitem outcome="/tipoEstudios/List" value="Tipo Estudios" icon="ui-icon-person">
+    <p:menuitem outcome="/investigador/List" value="Investigador" icon="ui-icon-person">
         <f:param name="i" value="6" />
     </p:menuitem>
-    <p:menuitem outcome="/tipoUrgencia/List" value="TipoUrgencia" icon="fa fa-fw fa-paperclip">
+    <p:menuitem outcome="/libro/List" value="Libro" icon="fa fa-fw fa-paperclip">
         <f:param name="i" value="7" />
     </p:menuitem>
-    <p:menuitem outcome="/urgencias/List" value="Urgencias" icon="ui-icon-comment">
+    <p:menuitem outcome="/ponencias/List" value="Ponencias" icon="ui-icon-comment">
         <f:param name="i" value="8" />
     </p:menuitem>
-    <p:menuitem outcome="/vacunas/List" value="Vacunas" icon="ui-icon-document-b">
+    <p:menuitem outcome="/revista/List" value="Revista" icon="ui-icon-document-b">
         <f:param name="i" value="9" />
     </p:menuitem>
-    <p:menuitem outcome="/veterinario/List" value="Veterinario" icon="ui-icon-folder-open">
+    <p:menuitem outcome="/tipoCategoria/List" value="Tipo Categoria" icon="ui-icon-folder-open">
         <f:param name="i" value="10" />
+    </p:menuitem>
+   <p:menuitem outcome="/tipoEvento/List" value="Tipo Evento" icon="ui-icon-clipboard">
+        <f:param name="i" value="11" />
+    </p:menuitem>
+                <p:menuitem outcome="/tipoEvento/List" value="Tipo Evento" icon="ui-icon-clipboard" >
+        <f:param name="i" value="11" />
     </p:menuitem>
 </p:tabMenu>
                 </h:form>
 </html>
-
