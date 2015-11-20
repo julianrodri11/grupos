@@ -22,11 +22,15 @@
        <p:graphicImage  value="/resources/img/bn.png" width="100%" height="175px"/>
            </div>
       
-           <div>
+           
+              
+                   <div id="divusuario">
             <h:form>
             Acceso concedido Usuario: #{usuario.nombre} <h:commandLink value="Logout" actionListener="#{usuario.logout()}" action="bienvenida"/>
         </h:form>
-           </div>  
+                  </div>
+                
+           
         
         </div>
 
