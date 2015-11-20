@@ -67,7 +67,7 @@
         <auth-method>FORM</auth-method>
         <realm-name>jdbc-gi-realm</realm-name>
         <form-login-config>
-            <form-login-page>/login/login_form_1.xhtml</form-login-page>
+            <form-login-page>/login/login_form.jsp</form-login-page>
             <form-error-page>/login/login_error.xhtml</form-error-page>
         </form-login-config>
     </login-config>
