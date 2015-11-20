@@ -18,7 +18,7 @@
             <p>Correo : <input type="email" name="j_username" placeholder="correo@umariana.edu.co" required="required"></p>
             <p>Contraseña: <input type="password" name="j_password" placeholder="*****"> </p>           
             <input type="submit" value="Login..."/>
-        </p:form>
+        <form>
     
             </ui:define>
         </ui:composition>
