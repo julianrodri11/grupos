@@ -30,6 +30,7 @@
         <web-resource-collection>
             <web-resource-name>adminGrupos</web-resource-name>
             <description/>
+            <url-pattern>/faces/index.xhtml</url-pattern>
             <url-pattern>/faces/articulo/*</url-pattern>
             <url-pattern>/faces/editorial/*</url-pattern>
             <url-pattern>/faces/estdoInvestigador/*</url-pattern>
@@ -56,6 +57,12 @@
             <url-pattern>/faces/articulo/*</url-pattern>
             <url-pattern>/faces/libro/*</url-pattern>
             <url-pattern>/faces/ponencias/*</url-pattern>
+            <url-pattern>/faces/index.xhtml</url-pattern>
+            <url-pattern>/faces/resources/*</url-pattern>
+            <url-pattern>/faces/menu.xhtml</url-pattern>
+            <url-pattern>/faces/templete1.xhtml</url-pattern>
+            <url-pattern>/faces/login/*</url-pattern>
+            <url-pattern>/faces/WEB-INF/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <description/>
@@ -67,7 +74,7 @@
         <realm-name>jdbc-gi-realm</realm-name>
         <form-login-config>
             <form-login-page>/login/login_form.jsp</form-login-page>
-            <form-error-page>/login/login_error.xhtml</form-error-page>
+            <form-error-page>/login/login_error.jx</form-error-page>
         </form-login-config>
     </login-config>
     <security-role>

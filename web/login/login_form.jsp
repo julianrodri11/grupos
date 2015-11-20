@@ -15,9 +15,8 @@
         <ui:define name="content">    
         <h1>Para esta seccion debes autenticarte</h1>
         <form method="post" action="j_security_check">
-            
-            User Id: <input name="j_username"/><br/>
-            Password:<input name="j_password" type="password"/><br/>
+            <p>Correo : <input type="email" name="j_username" placeholder="correo@umariana.edu.co" required="required"></p>
+            <p>Contraseña: <input type="password" name="j_password" placeholder="*****"> </p>           
             <input type="submit" value="Login..."/>
         </form>
     

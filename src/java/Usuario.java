@@ -18,11 +18,11 @@ public class Usuario implements Serializable {
 
     public String getNombre() 
     {
-        if (nombre != null) {
+        if (nombre == null) {
             getDatosUsuario();
         }
        
-        return nombre == null ? "Anonimo" : nombre;
+        return nombre == null ? "" : nombre;
     }
 
     public void setNombre(String nombre) {
