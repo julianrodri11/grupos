@@ -57,7 +57,7 @@
     width: 25px;
 }
 .loading .branding {
-    background: url("http://s18.postimg.org/8a4d3vj3p/db_loader.png") repeat scroll 0 0 transparent;
+    background: url("http://s18.postimg.org/8a4d3vj3p/db_loader.png") repeat scroll 0 0 transparent;    
     height: 40px;
     width: 40px;
     position: absolute;
@@ -111,8 +111,8 @@ input {
     
             
         <div class="loading">
-            
-        <div class="circle light"></div>
+          
+       <div class="circle light"></div>
         <div class="circle dark"></div>
         <div class="branding"></div>
         

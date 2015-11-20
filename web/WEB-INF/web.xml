@@ -58,11 +58,8 @@
             <url-pattern>/faces/libro/*</url-pattern>
             <url-pattern>/faces/ponencias/*</url-pattern>
             <url-pattern>/faces/index.xhtml</url-pattern>
-            <url-pattern>/faces/resources/*</url-pattern>
             <url-pattern>/faces/menu.xhtml</url-pattern>
             <url-pattern>/faces/templete1.xhtml</url-pattern>
-            <url-pattern>/faces/login/*</url-pattern>
-            <url-pattern>/faces/WEB-INF/*</url-pattern>
         </web-resource-collection>
         <auth-constraint>
             <description/>
