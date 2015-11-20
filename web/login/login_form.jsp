@@ -15,6 +15,7 @@
         <ui:define name="content">    
         <h1>Para esta seccion debes autenticarte</h1>
         <p:form method="post" action="j_security_check">
+            
             User Id: <p:inputText name="j_username"/><br/>
             Password:<p:inputText name="j_password" type="password"/><br/>
             <input type="submit" value="Login..."/>
