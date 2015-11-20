@@ -11,16 +11,15 @@
       xmlns:h="http://xmlns.jcp.org/jsf/html"
       xmlns:f="http://xmlns.jcp.org/jsf/core"
       xmlns:p="http://primefaces.org/ui">
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
-    </head>
-    <body>
+    <ui:composition template="/templete1.xhtml">
+        <ui:define name="content">    
         <h1>Para esta seccion debes autenticarte</h1>
-        <form method="post" action="j_security_check">
-            User Id: <input name="j_username"/><br/>
-            Password: <input name="j_password" type="password"/><br/>
+        <p:form method="post" action="j_security_check">
+            User Id: <p:inputText name="j_username"/><br/>
+            Password:<p:inputText name="j_password" type="password"/><br/>
             <input type="submit" value="Login..."/>
-        </form>
-    </body>
+        </p:form>
+    
+            </ui:define>
+        </ui:composition>
 </html>
