@@ -5,9 +5,9 @@
         <Node id="gruposInvestigacion/Edit.xhtml" x="1650" y="150" zoom="true"/>
         <Node id="tipoEvento/Edit.xhtml" x="900" y="150" zoom="true"/>
         <Node id="tipoCategoria/Edit.xhtml" x="1150" y="450" zoom="true"/>
-        <Node id="welcomePrimefaces.xhtml" x="150" y="450" zoom="true"/>
-        <Node id="tipoCategoria/View.xhtml" x="400" y="450" zoom="true"/>
         <Node id="tipoEvento/View.xhtml" x="900" y="900" zoom="true"/>
+        <Node id="tipoCategoria/View.xhtml" x="400" y="450" zoom="true"/>
+        <Node id="welcomePrimefaces.xhtml" x="150" y="450" zoom="true"/>
         <Node id="evento/List.xhtml" x="1150" y="150" zoom="true"/>
         <Node id="gruposInvestigacion/View.xhtml" x="1400" y="600" zoom="true"/>
         <Node id="tipoCategoria/List.xhtml" x="900" y="450" zoom="true"/>
@@ -43,12 +43,12 @@
         <Node id="libro/View.xhtml" x="1400" y="300" zoom="true"/>
         <Node id="login/login_form.jsp" x="1150" y="750" zoom="true"/>
         <Node id="template.xhtml" x="1150" y="600" zoom="true"/>
-        <Node id="formacionAcademica/List.xhtml" x="900" y="600" zoom="true"/>
         <Node id="libro/Create.xhtml" x="1900" y="300" zoom="true"/>
+        <Node id="formacionAcademica/List.xhtml" x="900" y="600" zoom="true"/>
         <Node id="editorial/List.xhtml" x="150" y="1050" zoom="true"/>
         <Node id="editorial/Create.xhtml" x="900" y="750" zoom="true"/>
-        <Node id="ponencias/List.xhtml" x="400" y="1200" zoom="true"/>
         <Node id="tipoEvento/Create.xhtml" x="900" y="1050" zoom="true"/>
+        <Node id="ponencias/List.xhtml" x="400" y="1200" zoom="true"/>
         <Node id="investigador/Create.xhtml" x="650" y="1050" zoom="true"/>
         <Node id="ponencias/View.xhtml" x="150" y="1200" zoom="true"/>
         <Node id="estdoInvestigador/View.xhtml" x="150" y="300" zoom="true"/>
